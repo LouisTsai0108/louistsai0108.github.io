@@ -1,0 +1,409 @@
+<!--index.html-->
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"> 
+    <title>My Portfolio</title> 
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity= "sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+      integrity="sha512-papmJ16KLBzj2YkdE+5EYXPLk6l2b7xvFeoJEB6Digw1VE3D6Z0SqnX+0Gooy2cuglRez2oJ6TP2PumoY1Yv3g==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Include Bootstrap from a CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="responsive.css"> 
+</head> 
+
+<body> 
+    <!-- Navbar header section -->
+    <header class="header"> 
+        <nav class="navbar">
+            <div class="music-controls">
+                <audio id="background-music" loop>
+                    <source src="Audio\dream-of-peace-chill-background-music-271248.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button id="music-toggle-btn" class="music-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+            <div class="logo"> 
+                <h2 class="logo-heading">Han Thai's portfolio site</h2>
+                <h3 class="logo-subheading">A showcase of my computer/data science projects</h3> 
+                <h3 class="logo-subheading">Did you know this site's responsive? (try resizing this page)</h3>
+            </div> 
+
+            <div class="hamburger" id="hamburger"> 
+                <i class="fas fa-bars hamburger-icon"></i> 
+                <i class="fas fa-times cross-icon"></i> 
+            </div> 
+            <!-- Menu items -->
+            <div class="menu"> 
+                <ul class="menu-list"> 
+                    <li class="menu-list-items"> 
+                        <a class="links" href="#home"> 
+                            Home 
+                        </a> 
+                    </li> 
+                    <li class="menu-list-items"> 
+                        <a class="links" href="#portfolio"> 
+                            Portfolio 
+                        </a> 
+                    </li> 
+                    <li class="menu-list-items"> 
+                        <a class="links" href="#about"> 
+                            About 
+                        </a> 
+                    </li> 
+                    
+                    <li class="menu-list-items"> 
+                        <a class="links" href="#contact"> 
+                            Contact Me 
+                        </a> 
+                    </li> 
+                </ul> 
+            </div> 
+        </nav>   
+    </header> 
+    <div class="menu-overlay"></div>
+    <!-- Main hero banner -->
+    <section id="home" class="hero"> 
+    <div class="intro"> 
+        <div class="headings"> 
+        <h3 class="greet-heading">Hello, I'm</h3> 
+        <h1 class="my-heading">Han Thai</h1> 
+        <h4 class="sub-heading"> 
+            A Data Analyst with 3 years of Experience. 
+        </h4> 
+        </div> 
+
+        <div class="intro-buttons"> 
+        <button class="btn common-btn" 
+                onclick="window.open('https://www.linkedin.com/in/hanthai0108/','_blank');">
+            Hire Me
+        </button> 
+        <button class="btn ghost-btn" 
+                onclick="window.open('https://github.com/LouisTsai0108/Project_Data/blob/main/Han%20Thai%20CV.pdf','_blank');">
+            Get Resume
+        </button>
+        </div> 
+    </div> 
+
+    <div class="hero-image-container">
+        <div class="slider">
+        <div class="slides">
+            <img src="Images/about-me-img2.jpg" alt="Han Thai Image 1">
+            <img src="Images/about-me-img3.jpg" alt="Han Thai Image 2">
+            <img src="Images/about-me-img4.jpg" alt="Han Thai Image 3">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio"> 
+        <div class="portfolio-heading"> 
+            <h1 class="my-heading text-center">Featured Portfolio</h1> 
+        </div>
+         
+        <div class="portfolio-content"> 
+            <div class="my-row"> 
+                <div class="my-col"> 
+                    <div class="my-card port-card" data-target="popup-1"> 
+                        <div class="image"> 
+                            <img src="Images\crypto-img.jpg"
+                                alt="Crypto Predict Image"> 
+                        </div> 
+                        <h3 class="greet-heading white-text">Crypto Prediction</h3> 
+                        <p class="small-para white-text">Aug 2025</p>     
+                    </div>     
+                </div> 
+                <audio id="hoverSound">
+                    <source src="Sound\ui-sounds-pack-1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio> 
+                <!-- Modal responsive with Blurred Overlay -->
+                <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn"">&times;</div>
+                        <h1>Crypto Prediction</h1>
+                        <p>Applied ARIMA and SARIMA models to forecast cryptocurrency prices, analyzing time series data to support investment decisions.
+                        <br><br>
+                            <a class="modal-links" href="https://github.com/LouisTsai0108/Project_Data/blob/main/ARIMA_Project_XRP_Github.ipynb" target="_blank"> 
+                                Github&nbsp;<i class="fa-brands fa-github-alt"></i>
+                            </a> 
+                        </p>
+                    </div>    
+                </div>
+
+                <div class="my-col"> 
+                    <div class="my-card port-card" data-target="popup-2"> 
+                        <div class="image"> 
+                            <img src="Images\web-development-img2.jpg"
+                                alt="Crypto Predict Image"> 
+                        </div> 
+                        <h3 class="greet-heading white-text">Web&nbsp;Development</h3> 
+                        <p class="small-para white-text">Aug 2025</p>     
+                    </div>     
+                </div> 
+                <!-- Modal responsive with Blurred Overlay -->
+                <div class="popup" id="popup-2">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn"">&times;</div>
+                        <h1>Web Development</h1>
+                        <p>Developed a responsive personal portfolio website using HTML, CSS, and JavaScript, with background music, animations, and modal popups.
+                        <br><br>
+                            <a class="modal-links" href="https://github.com/LouisTsai0108/Project_Data/blob/main/ARIMA_Project_XRP_Github.ipynb" target="_blank"> 
+                                Github&nbsp;<i class="fa-brands fa-github-alt"></i>
+                            </a> 
+                        </p>
+                    </div>    
+                </div>
+                
+                <div class="my-col"> 
+                    <div class="my-card port-card" data-target="popup-3"> 
+                        <div class="image"> 
+                            <img src="Images\credit-card-fraud-img.jpg" alt="SEO Image"> 
+                        </div> 
+                        <h3 class="greet-heading white-text">Credit Card Fraud</h3> 
+                        <p class="small-para white-text">July 2025</p> 
+                    </div> 
+                </div> 
+                <!-- Modal responsive with Blurred Overlay -->
+                <div class="popup" id="popup-3">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn"">&times;</div>
+                        <h1>Credit Card Fraud</h1>
+                        <p>Built a fraud detection system using Random Forest and LSTM to identify suspicious credit card transactions, handling imbalanced data and evaluating with precision, recall, and F1-score.
+                        <br><br>
+                            <a class="modal-links" href="https://github.com/LouisTsai0108/Project_Data/blob/main/Credit_Card_Fraud_Detection.ipynb" target="_blank"> 
+                                Github&nbsp;<i class="fa-brands fa-github-alt"></i>
+                            </a> 
+                        </p>
+                    </div>    
+                </div>
+            </div>
+
+            <div class="my-row"> 
+                <div class="my-col"> 
+                    <div class="my-card port-card" data-target="popup-4">         
+                        <div class="image"> 
+                            <img src="Images\customer-segmentation-img.jpg"
+                                alt="Content Writting Image"> 
+                        </div> 
+                        <h3 class="greet-heading white-text"> 
+                            Customer
+                            Segmentation
+                        </h3> 
+                        <p class="small-para white-text">Jan 2025</p> 
+                    </div> 
+                </div> 
+                <!-- Modal responsive with Blurred Overlay -->
+                <div class="popup" id="popup-4">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn"">&times;</div>
+                        <h1>Customer Segmentation</h1>
+                        <p>Performed customer segmentation with K-means clustering to uncover different spending behavior groups, supporting personalized marketing strategies.
+                        <br><br>
+                            <a class="modal-links" href="https://github.com/LouisTsai0108/Project_Data/blob/main/Customer_segmentation_Kmeans.ipynb" target="_blank"> 
+                                Github&nbsp;<i class="fa-brands fa-github-alt"></i>
+                            </a> 
+                        </p>
+                    </div>    
+                </div>
+
+                <div class="my-col"> 
+                    <div class="my-card port-card" data-target="popup-5"> 
+                        <div class="image"> 
+                            <img src="Images\data-modeling-pbi-img2.png"
+                                alt="Wordpress Image"> 
+                        </div> 
+                        <h3 class="greet-heading white-text"> 
+                            Data Modeling In PowerBI
+                        </h3> 
+                        <p class="small-para white-text"> 
+                            Apr 2025
+                        </p> 
+                    </div>  
+                </div> 
+                <!-- Modal responsive with Blurred Overlay -->
+                <div class="popup" id="popup-5">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn"">&times;</div>
+                        <h1>Data Modeling</h1>
+                        <p>Designed data models and interactive dashboards in Power BI, providing insights into revenue, customer behavior, and business performance.
+                        <br><br>
+                            <a class="modal-links" href="https://github.com/LouisTsai0108/Project_Data/blob/main/DataModel.png" target="_blank"> 
+                                Github&nbsp;<i class="fa-brands fa-github-alt"></i>
+                            </a> 
+                        </p>
+                    </div>    
+                </div>
+
+                <div class="my-col"> 
+                    <div class="my-card port-card" data-target="popup-6"> 
+                        <div class="image"> 
+                            <img src="Images\detect-spam-emails-img.png"
+                                alt="Video Editing Image"> 
+                        </div> 
+                        <h3 class="greet-heading white-text"> 
+                            Detecting Spam Emails
+                        </h3> 
+                        <p class="small-para white-text">May 2025</p> 
+                    </div> 
+                </div> 
+                <!-- Modal responsive with Blurred Overlay -->
+                <div class="popup" id="popup-6">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn"">&times;</div>
+                        <h1>Detecting Spam Emails Using TensorFlow</h1>
+                        <p>Implemented an LSTM model in TensorFlow to classify emails as spam or non-spam, leveraging sequential text patterns for improved accuracy.
+                        <br><br>
+                            <a class="modal-links" href="https://github.com/LouisTsai0108/Project_Data/blob/main/Detecting_Spam_Emails_Using_Tensorflow_1.ipynb" target="_blank"> 
+                                Github&nbsp;<i class="fa-brands fa-github-alt"></i> 
+                            </a> 
+                        </p>
+                    </div>    
+                </div>
+            </div>
+        </div> 
+    </section> 
+
+    <!-- About Section -->
+    <section id="about" class="about"> 
+        <div class="about-text"> 
+            <h1 class="my-heading">About Me</h1> 
+            <p class="lead-para"> 
+                Welcome to my portfolio website! 
+                I'm Han Thai, a passionate Data Analyst 
+                with 3 years of experience in turning 
+                raw data into actionable insights. 
+                My expertise lies in data visualization, 
+                statistical analysis, and predictive modeling. 
+                I thrive on solving complex problems and 
+                helping businesses make data-driven decisions. 
+                Explore my projects to see how I've 
+                leveraged data to drive success. 
+                Let's connect and discuss how I can 
+                contribute to your team's success!
+                <br><br>
+                In my free time, I enjoy jogging, 
+                photography, and exploring new technologies. 
+                Feel free to reach out if you'd like to 
+                collaborate or learn more about my work.
+            </p> 
+        </div> 
+    </section> 
+
+
+    <!-- Contact me section -->
+    <section class="contact" id="contact">
+        <div class="container"> 
+            <div class="contact-heading"> 
+                <h1 class="my-heading text-center">Contact Me</h1> 
+            </div> 
+
+            <div class="contact-content"> 
+                <div class="contact-form-container"> 
+                    <h1 class="greet-heading">Get In Touch</h1> 
+                    <form class="contact-form" id="contact-form"> 
+                        <input class="form-controls" type="text" name="name"
+                            placeholder="Your Name"> 
+                        <input class="form-controls" type="email" name="email"
+                            placeholder="Your Email"> 
+                        <input class="form-controls" type="text" name="phone"
+                            placeholder="Your Phone"> 
+                    </form>
+
+                    <form id="sendMessage">
+                        <textarea class="message-controls" name="message"
+                            placeholder="Write your message" cols="30" rows="10"></textarea> 
+                        <button type="submit" class="common-btn btn form-btn">Send Message</button> 
+                    </form>
+                </div> 
+
+                <div class="contact-details"> 
+                    <h1 class="greet-heading">My Contact Details</h1> 
+                    <div class="details"> 
+                        <h5 class="contact-heading">EMAIL</h5> 
+                        <p class="contact-text">thaibao1897@gmail.com</p> 
+                    </div> 
+                    <div class="details"> 
+                        <h5 class="contact-heading">PHONE</h5> 
+                        <p class="contact-text">+84 935306919</p> 
+                    </div> 
+                </div> 
+            </div> 
+        </div>
+    </section> 
+
+    <!-- Footer section -->
+    <footer class="footer-fixed-bottom-wrap"> 
+        <div class="footer-fixed-bottom"> 
+            <h4> 
+                Copyright © 2025 All rights reserved | 
+                This portfolio website template is created 
+                by Han Thai. 
+            </h4> 
+        </div>
+
+        <div class="footer-fixed-bottom"> 
+            <ul class="footer-menu-list"> 
+                <li class="footer-list-items"> 
+                    <a class="footer-links" href="#"> 
+                        <i class="fab fa-facebook-f"></i> 
+                    </a> 
+                </li> 
+                <li class="footer-list-items"> 
+                    <a class="footer-links" href="#"> 
+                        <i class="fab fa-twitter"></i> 
+                    </a> 
+                </li> 
+                <li class="footer-list-items"> 
+                    <a class="footer-links" href="#"> 
+                        <i class="fab fa-instagram"></i> 
+                    </a> 
+                </li> 
+                <li class="footer-list-items"> 
+                    <a class="footer-links" href="https://www.linkedin.com/in/hanthai0108/" target="_blank"> 
+                        <i class="fab fa-linkedin-in"></i> 
+                    </a> 
+                </li> 
+            </ul> 
+        </div> 
+        
+        
+        <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+        <span style='font-size:22px;'>&uarr;</span></button> 
+    </footer> 
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+        integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"> 
+    </script> 
+    
+    <!-- Email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- JavaScript -->
+    <script src="index.js"></script> 
+</body> 
+</html>
