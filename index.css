@@ -33,7 +33,7 @@ body {
   z-index: 1200;
 }
 textarea {
-  resize: none; /* không cho kéo dãn */
+  resize: none; 
 }
 /* Header Navbar Styles */
 .navbar {
@@ -588,5 +588,6 @@ textarea {
 .links:hover {
   border-bottom: 2px solid #ffffff;
 }
+
 
 
