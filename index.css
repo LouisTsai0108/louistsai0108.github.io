@@ -75,12 +75,10 @@ textarea {
 
 /* Main Hero Section Styles */
 .hero .intro { 
-  text-align: center; 
-  margin: 0 5rem; 
-  width: 100%;
-  margin: 0;
-  padding: 2rem 1rem;
-  box-sizing: border-box;
+text-align: center; 
+margin: 0;
+padding: 2rem 1rem;
+box-sizing: border-box;
 } 
 .hero .intro-buttons { 
     margin: 2rem 0;
@@ -105,7 +103,8 @@ textarea {
   flex: 1 1 300px;
 }
 .hero-image-container {
-  flex: 1 1 300px;
+ flex: 0 0 auto;     /* không bị ép co giãn */
+  max-width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -113,21 +112,25 @@ textarea {
 /* Slider */
 .slider {
   position: relative;
-  width: 400px; 
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin: 0 auto;
 }
 .slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
+  width: 100%;
 }
 .slides img {
-  width: 100%;
-  border-radius: 15px;
-  flex-shrink: 0;
+  flex: 0 0 100%;   /* Mỗi ảnh đúng bằng 100% slider */
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* không cắt ảnh */
+  display: block;
 }
+
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -294,19 +297,8 @@ textarea {
 .contact {
   padding: 2rem 5rem;
 }
-.contact-content {
-  display: flex;
-  margin: 2rem 0;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.contact-form-container,
-.contact-details {
-  width: 45%;
-  min-width: 300px;
-  --color: #000;
-}
+.contact-content { display: flex; justify-content: center; align-items: flex-start; gap: 40px; /* khoảng cách giữa 2 khối */ }
+.contact-form-container, .contact-details { flex: 1; max-width: 500px; }
 /*
 .contact-details .greet-heading {
   color: #4907e1;
