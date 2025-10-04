@@ -24,6 +24,7 @@
     font-size: 20px;
     padding: 0 5px;
   }
+
 }
 
 /* Mobile & tablet: off-canvas menu */
@@ -71,24 +72,49 @@
 }
 
 @media (max-width: 768px) {
-  .my-col {
-    flex: 1 1 50%; 
-    max-width: 80%;
-  }
-  .contact-details .greet-heading {
-    color: #4907e1;
+  .hero-image-container {
+    margin: 0 auto;
     text-align: center;
   }
-  .hero-image-container{ 
-  width: 50%;
+
+  .my-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .contact-content { 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+
+  .contact-form-container, 
+  .contact-details { 
+    width: 100%; 
+    max-width: none;
+  }
+
+  .contact-form, 
+  #sendMessage { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%;
+  }
+  .form-controls { 
+    width: calc(100% - 4cm);
+    margin: 10px 2cm;
+    display: block;
+    
+  } 
+  .form-btn { 
+    width: 80%; 
+    max-width: 300px; 
   }
 }
 
-@media (max-width: 600px) {
-  .greet-heading,
-  .my-heading,
-  .sub-heading {
-    font-size: 2rem;
-    text-align: center;
-  }
-}
+
+
+
+
+
